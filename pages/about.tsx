@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import Button from '@mui/material/Button';
+
 export default function About() {
   return (
     <>
@@ -9,6 +11,9 @@ export default function About() {
           Back to home
         </Link>
       </h2>
+      <div>
+        <Button variant="contained">Test MaterialUI</Button>
+      </div>
     </>
   );
 }
