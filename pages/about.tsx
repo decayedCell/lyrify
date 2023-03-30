@@ -5,7 +5,9 @@ export default function About() {
     <>
       <div>About</div>
       <h2>
-        <Link href="/">Back to home</Link>
+        <Link className="text-blue-500 underline" href="/">
+          Back to home
+        </Link>
       </h2>
     </>
   );
