@@ -2,8 +2,13 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import Script from 'next/script';
+import {useSelector, useDispatch} from 'react-redux';
+import {decrement, increment, selectValue} from '../store/slices/counterSlice';
 
 export default function Home() {
+  const count = useSelector(selectValue);
+  const dispatch = useDispatch();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -60,6 +65,9 @@ export default function Home() {
             </p>
           </a>
         </div>
+        <div>The value of count is {count}</div>
+        <button onClick={() => dispatch(increment())}>Increment</button>
+        <button onClick={() => dispatch(decrement())}>Decrement</button>
       </main>
 
       <footer>
