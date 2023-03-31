@@ -1,11 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Head from 'next/head';
 
 import Button from '@mui/material/Button';
 
 export default function About() {
   return (
     <>
+      <Head>
+        <title>About</title>
+      </Head>
       <div>About</div>
       <h2>
         <Link className="text-blue-500 underline" href="/">
