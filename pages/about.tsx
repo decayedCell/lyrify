@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Head from 'next/head';
+import Layout from '../components/layout';
 
 import Button from '@mui/material/Button';
 
 export default function About() {
   return (
-    <>
+    <Layout>
       <Head>
         <title>About</title>
       </Head>
@@ -25,6 +26,6 @@ export default function About() {
         width={300}
         alt="godspeed"
       />
-    </>
+    </Layout>
   );
 }
