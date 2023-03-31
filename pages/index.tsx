@@ -24,9 +24,10 @@ export default function Home() {
       />
 
       <main>
-        <h1 className={styles.title}>
+        <h1 className={styles.title}>Lyrify</h1>
+        <h2>
           Go to <Link href="/about">about</Link>
-        </h1>
+        </h2>
 
         <p className={styles.description}>
           Get started by editing <code>pages/index.js</code>
