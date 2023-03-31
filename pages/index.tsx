@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
+import Script from 'next/script';
 
 export default function Home() {
   return (
@@ -9,6 +10,18 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Script
+        id="microsoft-clarity"
+        strategy="lazyOnload"
+        dangerouslySetInnerHTML={{
+          __html: `
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "gh31ep043p");`,
+        }}
+      />
 
       <main>
         <h1 className={styles.title}>
