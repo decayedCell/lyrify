@@ -4,8 +4,9 @@ import '../styles/globals.css';
 import Layout from '../components/layout';
 import {store} from '../store/store';
 import {Provider} from 'react-redux';
+import {appWithTranslation} from 'next-i18next';
 
-export default function MyApp({Component, pageProps}: AppProps) {
+function MyApp({Component, pageProps}: AppProps) {
   return (
     <Provider store={store}>
       <Layout>
@@ -14,3 +15,5 @@ export default function MyApp({Component, pageProps}: AppProps) {
     </Provider>
   );
 }
+
+export default appWithTranslation(MyApp);

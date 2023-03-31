@@ -4,8 +4,10 @@ import Link from 'next/link';
 import Script from 'next/script';
 import {useSelector, useDispatch} from 'react-redux';
 import {decrement, increment, selectValue} from '../store/slices/counterSlice';
+import {useTranslation} from 'next-i18next';
 
 export default function Home() {
+  const localize = useTranslation().t;
   const count = useSelector(selectValue);
   const dispatch = useDispatch();
 
@@ -33,10 +35,6 @@ export default function Home() {
         <h2>
           Go to <Link href="/about">about</Link>
         </h2>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
